@@ -235,6 +235,15 @@ footer {
   display: block;
 }
 
+.painting-info {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(22, 20, 29, 0.92) 0%,
+      rgba(14, 13, 18, 0.98) 100%
+    );
+}
+
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
