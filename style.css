@@ -1,88 +1,262 @@
+:root {
+  --bg-main: #09090b;
+  --bg-soft: #111016;
+  --bg-card: #16141d;
+
+  --text-main: #f7f2e8;
+  --text-muted: #b8b0a3;
+
+  --gold: #d8a94b;
+  --gold-soft: rgba(216, 169, 75, 0.18);
+  --turquoise: #27b7b1;
+  --violet: #6f4bb8;
+  --rose: #a65375;
+
+  --border-soft: rgba(216, 169, 75, 0.18);
+  --shadow-soft: 0 22px 70px rgba(0, 0, 0, 0.45);
+}
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #222;
+  color: var(--text-main);
+  background: var(--bg-main);
+  line-height: 1.7;
 }
 
-.hero {
-  min-height: 80vh;
-  padding: 80px 0;
-  background: linear-gradient(135deg, #f8f5f0 0%, #ffffff 100%);
+h1,
+h2,
+h3,
+.navbar-brand {
+  letter-spacing: -0.04em;
 }
 
-.section {
-  padding: 90px 0;
+p {
+  color: var(--text-muted);
 }
 
-.hero-card {
-  background: #ffffff;
-  border-radius: 28px;
-  padding: 16px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-}
-
-.placeholder-image {
-  height: 420px;
-  border-radius: 20px;
-  background: #eee8df;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #8a7d6f;
-  font-weight: 600;
-}
-
-.service-card {
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 32px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
-}
-
-.contact-box {
-  max-width: 720px;
-  margin: 0 auto;
-  background: #f8f5f0;
-  border-radius: 28px;
-  padding: 56px 32px;
+.navbar {
+  background: rgba(9, 9, 11, 0.88) !important;
+  backdrop-filter: blur(16px);
+  border-color: var(--border-soft) !important;
 }
 
 .navbar-brand {
-  letter-spacing: -0.03em;
+  color: var(--text-main) !important;
+  font-size: 1.35rem;
+}
+
+.nav-link {
+  color: var(--text-muted) !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--gold) !important;
+}
+
+.navbar-toggler {
+  border-color: var(--border-soft);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.hero {
+  min-height: 86vh;
+  padding: 100px 0;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(216, 169, 75, 0.20), transparent 28%),
+    radial-gradient(circle at 82% 18%, rgba(39, 183, 177, 0.20), transparent 30%),
+    radial-gradient(circle at 78% 78%, rgba(111, 75, 184, 0.18), transparent 34%),
+    linear-gradient(135deg, #050506 0%, #111016 52%, #09090b 100%);
+}
+
+.hero .small {
+  color: var(--gold) !important;
+  letter-spacing: 0.16em;
+  font-weight: 800;
+}
+
+.hero h1 {
+  color: var(--text-main);
+  text-shadow: 0 0 32px rgba(216, 169, 75, 0.12);
+}
+
+.hero .lead {
+  max-width: 640px;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.bg-light {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(39, 183, 177, 0.10), transparent 26%),
+    radial-gradient(circle at 90% 10%, rgba(111, 75, 184, 0.12), transparent 30%),
+    var(--bg-soft) !important;
+}
+
+.hero-card {
+  background: linear-gradient(145deg, rgba(216, 169, 75, 0.18), rgba(39, 183, 177, 0.08));
+  border: 1px solid var(--border-soft);
+  border-radius: 34px;
+  padding: 18px;
+  box-shadow: var(--shadow-soft);
+  transform: rotate(1deg);
+}
+
+.placeholder-image {
+  height: 430px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 35% 20%, rgba(216, 169, 75, 0.24), transparent 28%),
+    radial-gradient(circle at 75% 70%, rgba(39, 183, 177, 0.18), transparent 34%),
+    #111016;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-weight: 700;
+  border: 1px dashed rgba(216, 169, 75, 0.35);
+}
+
+.painting-card {
+  background: var(--bg-card);
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.painting-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(216, 169, 75, 0.42);
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.52),
+    0 0 38px rgba(216, 169, 75, 0.10);
+}
+
+.painting-image {
+  height: 320px;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(216, 169, 75, 0.24), transparent 28%),
+    radial-gradient(circle at 80% 80%, rgba(111, 75, 184, 0.20), transparent 34%),
+    #0d0d12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.painting-card h3 {
+  color: var(--text-main);
+}
+
+.painting-card .text-muted {
+  color: var(--text-muted) !important;
+}
+
+.painting-card .fw-semibold {
+  color: var(--gold);
+  font-size: 1.05rem;
+}
+
+.service-card {
+  background:
+    linear-gradient(145deg, rgba(216, 169, 75, 0.08), rgba(39, 183, 177, 0.05)),
+    var(--bg-card);
+  border-radius: 26px;
+  padding: 36px;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.30);
+}
+
+.contact-box {
+  max-width: 760px;
+  margin: 0 auto;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(216, 169, 75, 0.18), transparent 32%),
+    radial-gradient(circle at 90% 80%, rgba(39, 183, 177, 0.14), transparent 34%),
+    var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 34px;
+  padding: 64px 36px;
+  box-shadow: var(--shadow-soft);
 }
 
 .btn {
   border-radius: 999px;
-  padding-left: 28px;
-  padding-right: 28px;
+  padding: 13px 30px;
+  font-weight: 800;
+}
+
+.btn-dark {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #111016;
+}
+
+.btn-dark:hover {
+  background: #f1c96a;
+  border-color: #f1c96a;
+  color: #09090b;
+}
+
+footer {
+  background: #050506;
+  border-color: var(--border-soft) !important;
+  color: var(--text-muted);
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+.painting-card img,
+.hero-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.painting-card .painting-image img {
+  display: block;
 }
 
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
-    padding: 56px 0;
-  }
-
-  .section {
     padding: 64px 0;
   }
 
-  .placeholder-image {
-    height: 300px;
+  .section {
+    padding: 68px 0;
   }
-  
-.painting-card {
-  background: #ffffff;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
-}
 
-.painting-image {
-  height: 280px;
-  background: #eee8df;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #8a7d6f;
-  font-weight: 600;
+  .placeholder-image {
+    height: 310px;
+  }
+
+  .painting-image {
+    height: 280px;
+  }
+
+  .contact-box {
+    padding: 44px 24px;
+  }
+
+  .hero-card {
+    transform: none;
+  }
 }
