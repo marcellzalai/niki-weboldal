@@ -69,4 +69,20 @@ body {
   .placeholder-image {
     height: 300px;
   }
+  
+.painting-card {
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+}
+
+.painting-image {
+  height: 280px;
+  background: #eee8df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8a7d6f;
+  font-weight: 600;
 }
